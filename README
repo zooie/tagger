@@ -1,0 +1,21 @@
+@author: Vik Singh (viksi@yahoo-inc.com)
+
+# Install libsvm
+
+tar -xzvf libsvm-2.89.tar.gz
+cd libsvm-2.89
+make
+
+# Crawl delicious data via BOSS
+
+python crawl_delicious.py
+
+# Generate a binary training set via two tags (pick from tags.txt)
+
+python gen_training_test_set.py microsoft google
+
+# Learn from the resulting training_data.txt and predict on test_data.txt
+
+python autosvm.py training_set.txt test_set.txt
+
+# Prints out the accuracy of the learner and saves models in timestamped folder
