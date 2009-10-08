@@ -2,7 +2,9 @@
 # Must have run python crawl_delicious.py or have vector_data.cpickle before this
 
 # Usage:
-#  python gen_training_test_split.py microsoft google
+#  python gen_training_test_split.py [tag1] [tag2]
+
+#  tag1, tag2 must be tags listed in tags.txt
 
 # Creates two files: training_data.txt test_data.txt
 # 1 label corresponds to tag1, -1 for tag2
