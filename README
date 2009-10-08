@@ -1,6 +1,7 @@
 @author: Vik Singh (viksi@yahoo-inc.com)
 
-A simple machine learned tagger trained on BOSS web / delicious data for Yahoo! Hack Day
+A simple BOSS example for Yahoo! Hack Day NYC
+A machine learned tagger trained on BOSS web / delicious data
 
 # Install libsvm
 
