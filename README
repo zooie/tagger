@@ -18,4 +18,4 @@ python gen_training_test_set.py microsoft google
 
 python autosvm.py training_set.txt test_set.txt
 
-# Prints out the accuracy of the learner and saves models in timestamped folder
+# Prints out the accuracy of the learner and saves model and prediction files in timestamped folder
