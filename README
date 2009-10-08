@@ -9,6 +9,8 @@ tar -xzvf libsvm-2.89.tar.gz
 cd libsvm-2.89
 make
 
+cd ..
+
 # Crawl delicious data via BOSS
 
 python crawl_delicious.py
