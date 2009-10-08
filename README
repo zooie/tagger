@@ -1,5 +1,7 @@
 @author: Vik Singh (viksi@yahoo-inc.com)
 
+A simple machine learned tagger trained on BOSS web / delicious data for Yahoo! Hack Day
+
 # Install libsvm
 
 tar -xzvf libsvm-2.89.tar.gz
