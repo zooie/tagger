@@ -26,7 +26,7 @@ def cleans(text):
 vector_data = []
 
 for q in open("tags.txt", "r"):
-  for offset in [0, 50, 100, 150, 200, 250, 300, 350, 400, 450]:
+  for offset in [0, 50, 100, 150]:
     req = BOSS % (q.strip(), offset)
     resp = urllib.urlopen(req).read()
     data = simplejson.loads(resp)
