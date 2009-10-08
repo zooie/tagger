@@ -1,5 +1,5 @@
 
-# Must have run python crawl_delicious.py before this
+# Must have run python crawl_delicious.py or have vector_data.cpickle before this
 
 # Usage:
 #  python gen_training_test_split.py microsoft google
