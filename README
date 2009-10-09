@@ -17,7 +17,7 @@ make
 
 cd ..
 
-# Crawl delicious data via BOSS
+# Optional: Crawl fresh delicious data via BOSS (a previous crawl already included)
 
 python crawl_delicious.py
 
