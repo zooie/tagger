@@ -11,7 +11,7 @@ BOSS = "http://boss.yahooapis.com/ysearch/web/v1/%s?appid=DfNrQ3bV34H_Ll3bncrHNj
 vector_data = []
 
 for q in open("tags.txt", "r"):
-  for o in xrange(0, 20):
+  for o in xrange(0, 10):
     offset = o * 50
     req = BOSS % (q.strip(), offset)
     resp = urllib.urlopen(req).read()
