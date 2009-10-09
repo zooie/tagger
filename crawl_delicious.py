@@ -11,11 +11,13 @@ BOSS = "http://boss.yahooapis.com/ysearch/web/v1/%s?appid=DfNrQ3bV34H_Ll3bncrHNj
 vector_data = []
 
 for q in open("tags.txt", "r"):
-  for o in xrange(0, 10):
+  for o in xrange(0, 5):
     offset = o * 50
     req = BOSS % (q.strip(), offset)
     resp = urllib.urlopen(req).read()
     data = simplejson.loads(resp)
+    if "resultset_web" not in data["ysearchresponse"]:
+      continue
     for r in data["ysearchresponse"]["resultset_web"]:
       text = r["title"] + " " + r["abstract"]
       vector = featurize.vectorize(text)
