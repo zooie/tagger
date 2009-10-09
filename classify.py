@@ -2,6 +2,9 @@
 # Usage
 #  python classify.py [tag1] [tag2] some free text
 
+# 'some free text' actually needs to be quite a bit
+# (about an abstract's size) to be more accurate
+
 # This does the training from scratch each time
 
 import os
