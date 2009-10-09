@@ -13,6 +13,8 @@ import cPickle
 import random
 import sys
 
+import featurize
+
 tag1 = sys.argv[1].lower()
 tag2 = sys.argv[2].lower()
 
@@ -28,18 +30,16 @@ for vector, tag in tr:
 random.shuffle(selected)
 split = int(len(selected) * 0.80)
 
-def format_features(vector):
-  return " ".join(["%d:%f" % (k, v) for k, v in sorted(vector.iteritems())])
-
 training_file = open("training_data.txt", "w")
 
 for tag, vector in selected[:split]:
-  training_file.write("%d %s\n" % (tag, format_features(vector)))
+  training_file.write("%d %s\n" % (tag, featurize.format_features(vector)))
 
 test_file = open("test_data.txt", "w")
 
 for tag, vector in selected[split:]:
-  test_file.write("%d %s\n" % (tag, format_features(vector)))
+  v = featurize.remove_tag(tag, vector)
+  test_file.write("%d %s\n" % (tag, featurize.format_features(v)))
 
 training_file.close()
 test_file.close()
