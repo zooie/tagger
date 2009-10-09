@@ -3,6 +3,12 @@
 A simple BOSS example for Yahoo! Hack Day NYC
 A machine learned tagger trained on BOSS web / delicious data
 
+Read this if you want to learn more and especially check out the caveats section if
+you're planning to use this code for more practical purposes
+
+http://zooie.wordpress.com/2009/10/09/build-an-automatic-tagger-in-200-lines-with-boss/
+
+
 # Install libsvm
 
 tar -xzvf libsvm-2.89.tar.gz
@@ -23,4 +29,4 @@ python gen_training_test_set.py microsoft google
 
 python autosvm.py training_set.txt test_set.txt
 
-# Prints out the accuracy of the learner and saves model and prediction files in timestamped folder
+# Prints out the accuracy of the learner and saves model + prediction files in timestamped folder
